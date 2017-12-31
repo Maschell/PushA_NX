@@ -4,8 +4,6 @@ Based on: https://github.com/vgmoose/sdl-hello-world
 
 Back to the roots. Back in 2008 I started with writing homebrew on Wii. The first "game" I created was "Push A".  
 Now, almost 10 years later, I quickly wrote a new version for the Switch.  
-
-Maybe only works with detached Joy-Cons.  
   
 Have fun!  
   
