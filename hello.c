@@ -80,7 +80,7 @@ int main(){
                 game_state = RESULT;
             }
         }else if(game_state == RESULT){
-            drawStringf(g, x, y, "Score: %d", button_count);
+            drawStringf(g, x, y, "Score: %d", score);
             drawStringf(g, x, y+2,"Press MINUS to try again.");
             if(isHighscore){
                 drawStringf(g, x, y+4,"NEW HIGHSCORE!");

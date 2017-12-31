@@ -26,7 +26,7 @@ void PADRead(struct PADData* data){
 
     // scan for controller
     hid_controller_t* num = hid_get_shared_memory()->controllers;
-    hid_controller_t* num8 = hid_get_shared_memory()->controllers;
+    hid_controller_t* num8 = hid_get_shared_memory()->controllers + 8 ;
 
     hid_controller_state_entry_t ent = num->main.entries[num->main.latest_idx];
     hid_controller_state_entry_t ent8 = num8->main.entries[num8->main.latest_idx];
