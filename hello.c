@@ -36,16 +36,16 @@ int main(){
 
         buttons_r = (last_buttons & (~pad_data.btns_h));
 
-        /*if(pad_data.btns_h & BUTTON_LEFT){
+        /*if(pad_data.btns_h & PAD_BUTTON_LEFT){
             x--;
         }
-        if(pad_data.btns_h & BUTTON_RIGHT){
+        if(pad_data.btns_h & PAD_BUTTON_RIGHT){
             x++;
         }
-        if(pad_data.btns_h & BUTTON_DOWN){
+        if(pad_data.btns_h & PAD_BUTTON_DOWN){
             y++;
         }
-        if(pad_data.btns_h & BUTTON_UP){
+        if(pad_data.btns_h & PAD_BUTTON_UP){
             y--;
         }*/
 
@@ -57,12 +57,12 @@ int main(){
 
         if(game_state == IDLE){
             drawStringf(g, x, y, "Press MINUS to start!");
-            if(pad_data.btns_h & BUTTON_MINUS){
+            if(pad_data.btns_h & PAD_BUTTON_MINUS){
                 game_state = IN_GAME;
             }
         }else if(game_state == IN_GAME){
             frame_counter++;
-            if(buttons_r & BUTTON_A){
+            if(buttons_r & PAD_BUTTON_A){
                 button_count++;
             }
             float secLeft = (round_duration - frame_counter) /60.0f;
@@ -85,13 +85,13 @@ int main(){
             if(isHighscore){
                 drawStringf(g, x, y+4,"NEW HIGHSCORE!");
             }
-            if(pad_data.btns_h & BUTTON_MINUS){
+            if(pad_data.btns_h & PAD_BUTTON_MINUS){
                 game_state = IN_GAME;
                 isHighscore = 0;
             }
         }
 
-        if(pad_data.btns_h & BUTTON_PLUS){
+        if(pad_data.btns_h & PAD_BUTTON_PLUS){
             break;
         }
         update(g);
