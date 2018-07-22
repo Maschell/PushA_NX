@@ -30,8 +30,7 @@ Graphics* init()
 
 void deinit(struct Graphics* g)
 {
-	SDL_Delay(1);
-	SDL_DestroyWindow(g->window);
+	SDL_VideoQuit();
 	SDL_Quit();
 
 	free(g);

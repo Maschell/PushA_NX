@@ -10,14 +10,14 @@ void PADDestroy(){
 }
 
 static void readInputInternal(struct PADData* data,hid_controller_state_entry_t ent ){
-    data->btns_h |= ((ent.button_state & JOYPAD_A)? 		BUTTON_A : 0);
-    data->btns_h |= ((ent.button_state & JOYPAD_B)? 		BUTTON_B : 0);
-    data->btns_h |= ((ent.button_state & JOYPAD_UP)? 		BUTTON_UP : 0);
-    data->btns_h |= ((ent.button_state & JOYPAD_DOWN)? 		BUTTON_DOWN : 0);
-    data->btns_h |= ((ent.button_state & JOYPAD_LEFT)? 		BUTTON_LEFT : 0);
-    data->btns_h |= ((ent.button_state & JOYPAD_RIGHT)?		BUTTON_RIGHT : 0);
-    data->btns_h |= ((ent.button_state & JOYPAD_START)?		BUTTON_PLUS : 0);
-    data->btns_h |= ((ent.button_state & JOYPAD_SELECT)?	BUTTON_MINUS : 0);
+    data->btns_h |= ((ent.button_state & JOYPAD_A)? 		PAD_BUTTON_A : 0);
+    data->btns_h |= ((ent.button_state & JOYPAD_B)? 		PAD_BUTTON_B : 0);
+    data->btns_h |= ((ent.button_state & JOYPAD_UP)? 		PAD_BUTTON_UP : 0);
+    data->btns_h |= ((ent.button_state & JOYPAD_DOWN)? 		PAD_BUTTON_DOWN : 0);
+    data->btns_h |= ((ent.button_state & JOYPAD_LEFT)? 		PAD_BUTTON_LEFT : 0);
+    data->btns_h |= ((ent.button_state & JOYPAD_RIGHT)?		PAD_BUTTON_RIGHT : 0);
+    data->btns_h |= ((ent.button_state & JOYPAD_START)?		PAD_BUTTON_PLUS : 0);
+    data->btns_h |= ((ent.button_state & JOYPAD_SELECT)?	PAD_BUTTON_MINUS : 0);
 }
 
 void PADRead(struct PADData* data){

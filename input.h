@@ -1,14 +1,14 @@
 // "PAD" controls (unique to us)
-#define BUTTON_LEFT	    0b00000001
-#define BUTTON_RIGHT    0b00000010
-#define BUTTON_UP       0b00000100
-#define BUTTON_DOWN     0b00001000
+#define PAD_BUTTON_LEFT	    0b00000001
+#define PAD_BUTTON_RIGHT    0b00000010
+#define PAD_BUTTON_UP       0b00000100
+#define PAD_BUTTON_DOWN     0b00001000
 
-#define BUTTON_MINUS    0b00010000
-#define BUTTON_PLUS     0b00100000
+#define PAD_BUTTON_MINUS    0b00010000
+#define PAD_BUTTON_PLUS     0b00100000
 
-#define BUTTON_A        0b01000000
-#define BUTTON_B        0b10000000
+#define PAD_BUTTON_A        0b01000000
+#define PAD_BUTTON_B        0b10000000
 
 // switch controls
 #define JOYPAD_LEFT     0x1000
